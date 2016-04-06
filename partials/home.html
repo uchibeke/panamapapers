@@ -1,0 +1,18 @@
+<section class="row" >
+	<br />
+	<div id="sticky-anchor"></div>
+	<div class="  center-block ">
+		<input ng-model="culpritSearch" placeholder="Search for a Person"
+		class=" form-control searchBar" id="searchBar" autofocus>
+		<div  class="panamaDataPreview" ng-hide=" $storage.xx.length > 0 && switchView == true" >
+			<p ng-repeat="item in panamaData | filter: culpritSearch | orderBy: guestOrder:direction">
+				{{item.idx}}
+				<br />
+			</p>
+		</div>
+		<hr />
+	</div>
+	<!-- {{panamaData[0]}} -->
+</section>
+
+<!-- Pretiffy here. Remove = by search. Copy on current format -->
